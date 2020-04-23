@@ -1,0 +1,11 @@
+*.pyc
+*.pytest_cache
+
+*/logs/*
+*.log
+
+*.pkl
+
+build/*
+dist/*
+*.egg-info/*
