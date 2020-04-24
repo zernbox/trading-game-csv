@@ -172,7 +172,7 @@ class Exchange(Transaction):
     def end_loss(self):
         if self._end_loss is not None:
             return self._end_loss
-        return - self.nav * 0.03
+        return - self.nav * 0.07
 
     @property
     def is_over_loss(self):
