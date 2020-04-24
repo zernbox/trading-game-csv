@@ -172,7 +172,7 @@ class Exchange(Transaction):
     def end_loss(self):
         if self._end_loss is not None:
             return self._end_loss
-        return - self.nav * 0.07
+        return - self.nav * 0.3
 
     @property
     def is_over_loss(self):
@@ -197,12 +197,16 @@ class Exchange(Transaction):
         """
             rewrite if inneed.
         """
-        if self.position.is_empty and action in self.cost_action:
+        #if self.position.is_empty and action in self.cost_action:
+        if action in self.cost_action:
             amount = self.nav / latest_price
+            '''
             if amount < 100:
                 return 2
             else:
-                return amount * (0.0039 + 0.0039)
+                return amount * (0.004)
+            '''
+            return amount * (0.0015)
         else:
             return 0
 
