@@ -29,11 +29,11 @@ class Positions:
 
     @property
     def is_do_long(self):
-        return self.amount > 100000
+        return self.amount > 50000
 
     @property
     def is_do_short(self):
-        return self.amount < -100000
+        return self.amount < -50000
 
     @property
     def rate(self):
